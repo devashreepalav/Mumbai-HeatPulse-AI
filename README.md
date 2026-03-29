@@ -1,5 +1,5 @@
 
-# 🏙️ Mumbai HeatPulse: AI-Driven Urban Climate Intelligence
+# 🏙️ Mumbai HeatPulse: Strategic Urban Climate Intelligence
 
 A comprehensive Geospatial AI dashboard designed to analyze and mitigate the **Urban Heat Island (UHI)** effect across Mumbai's administrative wards. This tool correlates real-time satellite vegetation data (NDVI) with surface temperatures to provide actionable cooling strategies.
 
