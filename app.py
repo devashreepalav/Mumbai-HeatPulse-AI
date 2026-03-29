@@ -86,3 +86,26 @@ if df is not None:
         st.subheader("📥 Export Data")
         csv = df.to_csv(index=False).encode('utf-8')
         st.download_button("Download CSV Report", data=csv, file_name='mumbai_heat_pro.csv')
+
+# 6. STRATEGIC ADVISOR (FINAL PRO FEATURE)
+st.markdown("---")
+st.subheader("📋 Ward-Specific Heat Action Plan")
+
+selected_ward = st.selectbox("Select a Ward to generate a Mitigation Strategy:", df['Ward'].unique())
+ward_data = df[df['Ward'] == selected_ward].iloc[0]
+
+col_a, col_b = st.columns(2)
+
+with col_a:
+    st.write(f"**Current Status for Ward {selected_ward}:**")
+    st.write(f"* Heat Vulnerability: {ward_data['Vulnerability_Index']:.1f}/100")
+    st.write(f"* Greenery Level (NDVI): {ward_data['Vegetation_Index_NDVI']}")
+
+with col_b:
+    st.write("**AI Recommended Actions:**")
+    if ward_data['Vulnerability_Index'] > 70:
+        st.warning("🚨 HIGH PRIORITY: Implement Cool Roof policies and rapid urban afforestation.")
+    elif ward_data['Vulnerability_Index'] > 40:
+        st.info("⚠️ MODERATE: Increase street-side tree canopy and preserve existing parks.")
+    else:
+        st.success("✅ LOW RISK: Maintain current green cover and monitor building density.")
