@@ -2,7 +2,7 @@
 
 A live AI-driven dashboard analyzing the **Urban Heat Island (UHI)** effect across Mumbai's wards. This project correlates vegetation density (NDVI), building density, and socioeconomic factors to predict and visualize surface temperature variances.
 
-[Live Dashboard Link Here]
+https://mumbai-heatpulse-ai-spke67ghqrasb4pml7vzm4.streamlit.app/
 
 ## 🚀 Key Features
 * **Live Satellite Integration:** Fetches real-time temperature data via Open-Meteo API.
